@@ -1,0 +1,22 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memsize: 1024
+    nested-virt: "yes"
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.3.0
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      box: express42/ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apt]
+      - recipe[theforeman::default]
+    attributes:

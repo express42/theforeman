@@ -1,0 +1,6 @@
+include_recipe 'theforeman::official_repository'
+include_recipe 'theforeman::install'
+include_recipe 'theforeman::database'
+include_recipe 'theforeman::memcache'
+include_recipe 'theforeman::config'
+include_recipe 'theforeman::tftp'
