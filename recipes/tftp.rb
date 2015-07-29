@@ -5,6 +5,11 @@ end
 tftproot = node['foreman']['foreman-proxy']['tftp']['tftproot']
 foreman_proxy_conf_path = node['foreman']['foreman_proxy_conf_path']
 
+directory tftproot do
+  owner 'foreman-proxy'
+  group 'foreman-proxy'
+end
+
 %w(boot pxelinux.cfg).each do |dir|
   directory "#{tftproot}/#{dir}" do
     owner 'foreman-proxy'
