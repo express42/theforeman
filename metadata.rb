@@ -8,3 +8,4 @@ version '1.0.2'
 
 depends 'postgresql_lwrp'
 depends 'memcached'
+depends 'nginx'
