@@ -1,7 +1,7 @@
 postgresql 'main' do
   cluster_version '9.3'
   configuration(
-#      listen_addresses:           '192.168.0.2',
+      listen_addresses:           '127.0.0.1',
       ssl_renegotiation_limit:    0,
       shared_buffers:             '1024MB',
       maintenance_work_mem:       '8MB',
