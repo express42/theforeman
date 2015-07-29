@@ -2,9 +2,10 @@
   package pkg
 end
 
-
 %w(ruby-smart-proxy-chef ruby-smart-proxy-discovery).each do |pkg|
   package pkg
 end
+
+package 'unicorn'
 
 chef_gem 'foreman_api'
