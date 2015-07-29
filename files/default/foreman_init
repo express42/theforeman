@@ -15,7 +15,7 @@ SCRIPTNAME=/etc/init.d/$NAME
 # Read configuration variable file if it is present
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
-FOREMAN_IFACE=${FOREMAN_IFACE:-'0.0.0.0'}
+FOREMAN_IFACE=${FOREMAN_IFACE:-'127.0.0.1'}
 FOREMAN_PORT=${FOREMAN_PORT:-'3000'}
 FOREMAN_USER=${FOREMAN_USER:-'foreman'}
 FOREMAN_HOME=${FOREMAN_HOME:-'/usr/share/foreman'}

@@ -3,13 +3,13 @@ template '/etc/default/foreman' do
   variables config: node['foreman']['etc_default']
 end
 
-template '/etc/foreman/database.yml' do
-  source 'database.yml.erb'
+cookbook_file '/etc/init.d/foreman' do
+  source 'foreman_init'
   notifies :restart, 'service[foreman]', :delayed
 end
 
-cookbook_file '/etc/init.d/foreman' do
-  source 'foreman_init'
+template '/etc/foreman/database.yml' do
+  source 'database.yml.erb'
   notifies :restart, 'service[foreman]', :delayed
 end
 
