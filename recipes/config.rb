@@ -25,12 +25,12 @@ link '/usr/share/foreman/config/unicorn.rb' do
 end
 
 service 'foreman' do
-  supports :status => true, :restart => true
+  supports status: true, restart: true
   action [:enable, :start]
 end
 
 service 'foreman-proxy' do
-  supports :status => true, :restart => true
+  supports status: true, restart: true
   action [:enable, :start]
 end
 

@@ -26,6 +26,6 @@ end
 
 template "#{foreman_proxy_conf_path}/settings.d/tftp.yml" do
   source 'tftp.yml.erb'
-  variables( tftproot: tftproot )
+  variables(tftproot: tftproot)
   notifies :restart, 'service[foreman-proxy]', :delayed
 end
