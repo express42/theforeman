@@ -6,6 +6,7 @@ end
 cookbook_file '/etc/init.d/foreman' do
   source 'foreman_init'
   notifies :restart, 'service[foreman]', :delayed
+  mode '0755'
 end
 
 template '/etc/foreman/database.yml' do
